@@ -1,0 +1,9 @@
+<div class="cart-product">
+    <div class="image-holder">
+        <img [src]="product.image" [alt]="product.title" class="product-image" />
+    </div>
+    <div class="product-details">
+        <span class="product-details__title">{{ product.title }}</span>
+        <span class="product-details__price">${{ product.price }} <button (click)="removeFromCart()">remove</button></span>
+    </div>
+</div>
