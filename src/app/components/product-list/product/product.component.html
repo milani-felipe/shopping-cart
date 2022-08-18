@@ -1,0 +1,17 @@
+<div class="product">
+    <div class="product-image-holder">
+        <img class="product-image" [src]="product.image" [alt]="product.title" />
+    </div>
+    <div class="product-details">
+        <p class="product-details__title">{{ product.title }}</p>
+        <p class="product-details__price">${{ product.price }}</p>
+    </div>
+    <div class="product-actions">
+        <button class="product-actions__add" (click)="addToCart(product)" *ngIf="!inCart">
+            <img src="/assets/images/add-to-cart.png" alt="add to cart" />
+        </button>
+        <button class="product-actions__remove" (click)="removeFromCart(product)" *ngIf="inCart">
+            <img src="/assets/images/remove-from-cart.png" alt="remove from cart" />
+        </button>
+    </div>
+</div>
