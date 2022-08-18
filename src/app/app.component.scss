@@ -1,0 +1,18 @@
+.wrapper {
+    position: relative;
+    .app-cart {
+        position: fixed;
+        top: 75px;
+        right: 0;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .wrapper {
+        .app-cart {
+            position: absolute;
+            height: 100%;
+        }
+    }
+    
+}
