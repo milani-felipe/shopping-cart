@@ -6,7 +6,7 @@
         <ul>
             <li (click)="toggleCart.emit()">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span class="badge" *ngIf="cart.items.length > 0">{{ cart.items.length }}</span>
+                <span class="badge" *ngIf="cart.items.length > 0">{{ totalItems }}</span>
             </li>
         </ul>
     </div>

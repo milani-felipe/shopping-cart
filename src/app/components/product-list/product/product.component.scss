@@ -84,6 +84,7 @@
 
         &__add {
             @extend %button;
+            margin-left: 8px;
             border: 2px solid rgb(52, 186, 219);
         }
 

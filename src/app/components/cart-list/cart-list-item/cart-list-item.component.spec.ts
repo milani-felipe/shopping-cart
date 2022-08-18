@@ -59,18 +59,11 @@ describe('CartListItemComponent', () => {
 
   it('should send CART_REMOVE action', () => {
     component.product = {
-      category: 'a',
-      description: 'b',
       id: 0,
       image: 'c',
-      price: 10,
-      rating: {
-        rate: 0,
-        count: 0
-      },
-      count: 0,
-      rate: 0,
-      title: 'd'
+      price: 0,
+      title: 'd',
+      qty: 1
     }
     component.removeFromCart()
     store.scannedActions$.subscribe((a: Action) => expect(

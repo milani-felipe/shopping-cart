@@ -16,18 +16,11 @@ describe('Store > Data > DataReducer', () => {
   it('SHOULD add item to cart', () => {
     const { initialState } = fromReducer;
     const payload: any = {
-      category: 'a',
-      description: 'b',
       id: 0,
       image: 'c',
-      price: 10,
-      rating: {
-        rate: 0,
-        count: 0
-      },
-      count: 0,
-      rate: 0,
-      title: 'd'
+      price: 0,
+      title: 'd',
+      qty: 1
     };
     const action = new fromActions.AddToCart(payload);
     const state = fromReducer.ShopReducer(initialState, action);
@@ -38,18 +31,11 @@ describe('Store > Data > DataReducer', () => {
   it('SHOULD remove item to cart', () => {
     const { initialState } = fromReducer;
     const payload: any = {
-      category: 'a',
-      description: 'b',
       id: 0,
       image: 'c',
-      price: 10,
-      rating: {
-        rate: 0,
-        count: 0
-      },
-      count: 0,
-      rate: 0,
-      title: 'd'
+      price: 0,
+      title: 'd',
+      qty: 1
     };
     const actionAdd = new fromActions.AddToCart(payload);
     const state1 = fromReducer.ShopReducer(initialState, actionAdd);

@@ -17,10 +17,19 @@ export class HeaderComponent implements OnInit {
     items: [],
     total: 0
   };
+  totalItems = 0;
   ngOnInit(): void {
     this.store.subscribe(data => {
       this.cart = data.state.cart;
+      this.showTotalItems();
     })
+  }
+
+  showTotalItems() {
+    this.totalItems = 0;
+    for(let item of this.cart.items) {
+      this.totalItems += item.qty
+    }
   }
 
 }

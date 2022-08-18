@@ -8,10 +8,18 @@ export interface ProductModel {
     rating: RatingModel;
     count: number;
     rate: number;
-    title: string
+    title: string;
 }
 
 export interface RatingModel {
     rate: number;
     count: number;
+}
+
+export interface CartProductModel {
+    id: number;
+    image: string;
+    qty: number;
+    title: string;
+    price: number;
 }

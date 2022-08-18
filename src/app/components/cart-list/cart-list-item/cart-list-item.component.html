@@ -5,5 +5,6 @@
     <div class="product-details">
         <span class="product-details__title">{{ product.title }}</span>
         <span class="product-details__price">${{ product.price }} <button (click)="removeFromCart()">remove</button></span>
+        <span>{{product.qty}}</span>
     </div>
 </div>

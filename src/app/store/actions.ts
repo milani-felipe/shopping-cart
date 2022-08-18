@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { ProductModel } from '../models/Product';
+import { CartProductModel, ProductModel } from '../models/Product';
 
 export enum ActionTypes {
     CART_ADD = '[Product] Add to cart',
@@ -11,7 +11,7 @@ export enum ActionTypes {
 export class AddToCart implements Action {
     readonly type = ActionTypes.CART_ADD;
 
-    constructor(public payload: ProductModel) { }
+    constructor(public payload: CartProductModel) { }
 }
 
 export class GetItems implements Action {
@@ -21,7 +21,7 @@ export class GetItems implements Action {
 export class RemoveFromCart implements Action {
     readonly type = ActionTypes.CART_REMOVE;
 
-    constructor(public payload: ProductModel) { }
+    constructor(public payload: CartProductModel) { }
 }
 
 export class LoadSuccess implements Action {

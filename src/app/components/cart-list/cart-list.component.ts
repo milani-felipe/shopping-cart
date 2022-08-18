@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ProductModel } from 'src/app/models/Product';
+import { CartProductModel } from 'src/app/models/Product';
 import { AppState } from 'src/app/store';
 
 @Component({
@@ -11,7 +11,7 @@ import { AppState } from 'src/app/store';
 export class CartListComponent implements OnInit {
 
   constructor(private store: Store<AppState>) { }
-  items: ProductModel[] = [];
+  items: CartProductModel[] = [];
   total: number = 0;
   ngOnInit(): void {
     this.store.subscribe(data => {

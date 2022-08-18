@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ProductModel } from 'src/app/models/Product';
+import { CartProductModel } from 'src/app/models/Product';
 import { RemoveFromCart } from 'src/app/store/actions';
 
 @Component({
@@ -9,19 +9,12 @@ import { RemoveFromCart } from 'src/app/store/actions';
   styleUrls: ['./cart-list-item.component.scss']
 })
 export class CartListItemComponent {
-  @Input() product: ProductModel = {
-    category: '',
-    description: '',
+  @Input() product: CartProductModel = {
     id: 0,
     image: '',
     price: 0,
-    rating: {
-      rate: 0,
-      count: 0
-    },
-    count: 0,
-    rate: 0,
-    title: ''
+    title: '',
+    qty: 0
   };
   constructor(private store: Store) { }
 

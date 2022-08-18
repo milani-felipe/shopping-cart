@@ -1,4 +1,4 @@
-import { ProductModel } from "./Product";
+import { CartProductModel, ProductModel } from "./Product";
 
 export interface StateModel {
     shoppList: ProductModel[];
@@ -7,6 +7,6 @@ export interface StateModel {
 
 
 export interface CartModel {
-    items: ProductModel[];
+    items: CartProductModel[];
     total: number;
 }

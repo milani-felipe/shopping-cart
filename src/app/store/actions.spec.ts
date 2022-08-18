@@ -9,18 +9,11 @@ describe('Store > Data > DataActions', () => {
 
   it('SHOULD create a SetData action containing a payload', () => {
     const payload = {
-        category: 'a',
-        description: 'b',
-        id: 0,
-        image: 'c',
-        price: 0,
-        rating: {
-          rate: 0,
-          count: 0
-        },
-        count: 0,
-        rate: 0,
-        title: 'd'
+      id: 0,
+      image: 'c',
+      price: 0,
+      title: 'd',
+      qty: 1
       };
     const action = new Actions.AddToCart(payload);
 
@@ -32,18 +25,11 @@ describe('Store > Data > DataActions', () => {
 
   it('SHOULD create a SetData action containing a payload', () => {
     const payload = {
-        category: 'a',
-        description: 'b',
         id: 0,
         image: 'c',
         price: 0,
-        rating: {
-          rate: 0,
-          count: 0
-        },
-        count: 0,
-        rate: 0,
-        title: 'd'
+        title: 'd',
+        qty: 1
       };
     const action = new Actions.RemoveFromCart(payload);
 

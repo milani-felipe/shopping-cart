@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ProductModel } from 'src/app/models/Product';
+import { CartProductModel, ProductModel } from 'src/app/models/Product';
 import { AppState } from 'src/app/store';
 import { AddToCart, RemoveFromCart } from 'src/app/store/actions';
 
@@ -25,15 +25,15 @@ export class ProductComponent implements OnInit {
     rate: 0,
     title: ''
   };
-  cartItems: ProductModel[] = [];
+  cartItems: CartProductModel[] = [];
   constructor(private store: Store<AppState>) { }
 
   addToCart(item: ProductModel) {
-    this.store.dispatch(new AddToCart(item));
+    this.store.dispatch(new AddToCart({id: item.id, title: item.title, image: item.image, qty: 1, price: item.price}));
   }
 
   removeFromCart(item: ProductModel) {
-    this.store.dispatch(new RemoveFromCart(item));
+    this.store.dispatch(new RemoveFromCart({id: item.id, title: item.title, image: item.image, qty: 1, price: item.price}));
   }
 
   ngOnInit(): void {
